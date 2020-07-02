@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="icon" href="https://i.imgur.com/ImTVRKZ.png" sizes="32x32" type="image/png">
+<title>Bommai Padam</title>
+<Style>
+</Style>
+</head>
+<body>
+<h1>Bommai Padam</h1>
+<p>Please Navigate to any of the comics</p>
+<ul th:each="comic: ${comics}">
+<a th:href="@{'/' + ${comic.id}}"><li th:text="${comic.name + ' (' + comic.id + ')'}"></li></a>
+</ul>
+<a th:href="@{'/all'}">click here to see All</a>
+<h1>finished</h1>
+</body>
+</html>

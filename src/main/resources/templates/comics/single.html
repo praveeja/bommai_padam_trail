@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="icon" href="https://i.imgur.com/ImTVRKZ.png" sizes="32x32" type="image/png">
+<title>Bommai Padam</title>
+<Style>
+img{
+  width: 100%;
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</Style>
+</head>
+<body>
+<a th:href="@{'/'}">return to homepage</a>
+<h1>Bommai Padam</h1>
+<h2 th:text="${comic.name}">sample</h2>
+<img th:src="${comic.imgSrc}" th:title="${comic.name}" />
+</body>
+</html>
